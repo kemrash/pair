@@ -1,2 +1,2 @@
-# pair
-Игра в пары
+# Игра в пары
+Сайт: https://pair.kemnep.ru/
