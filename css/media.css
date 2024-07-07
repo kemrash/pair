@@ -1,0 +1,43 @@
+@media(any-hover: hover) {
+  .btn:hover:not(:focus-visible) {
+    outline: 3px solid orange;
+  }
+
+  .header__input:hover:not(:focus-visible) {
+    outline: 3px solid orange;
+  }
+
+  .list__btn:hover:not(:focus-visible, :disabled) {
+    outline: 3px solid orange;
+  }
+}
+
+@media (max-width: 800px) {
+  .subtitle {
+    font-size: 25px;
+  }
+
+  .header__container {
+    justify-content: center;
+    align-items: unset;
+  }
+
+  .header__title {
+    max-width: unset;
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 470px) {
+  .header__span {
+    margin-right: unset;
+    width: 100%;
+  }
+
+  .header__input {
+    display: block;
+    margin: 0 auto;
+  }
+}

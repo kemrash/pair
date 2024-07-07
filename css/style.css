@@ -1,0 +1,269 @@
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-Bold"),
+    url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "OpenSans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.fieldset-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.text-reset {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.btn {
+  display: block;
+  padding: 10px 25px;
+  border-radius: 10px;
+  outline: 3px solid transparent;
+  color: white;
+  background-color: blue;
+  transition: outline .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.btn:focus-visible {
+  outline: 3px solid orange;
+}
+
+.btn:active:not(:focus-visible) {
+  background-color: blueviolet;
+  outline: none;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+/* header*/
+.header {
+  padding: 10px 0;
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  margin: 0;
+  padding: 5px;
+  padding-bottom: 17px;
+  max-width: max-content;
+  font-size: 50px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.header__fieldset {
+  padding: 10px 0;
+}
+
+.header__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__label {
+  margin-bottom: 10px;
+}
+
+.header__span {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header__input {
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: 1px solid slategray;
+  outline: 3px solid transparent;
+  width: 47px;
+  transition: outline .3s ease-in-out
+}
+
+.header__input:focus-visible {
+  outline: 3px solid orange;
+}
+
+.header__error {
+  margin-bottom: 10px;
+  color: red;
+  text-align: center;
+}
+
+.header__btn {
+  align-self: center;
+}
+
+/* game */
+.game {
+  padding: 10px 0;
+}
+
+.game__timer {
+  margin-bottom: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.game__time {
+  color: red;
+}
+
+.game__wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.list__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  outline: 3px solid transparent;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  transition: transform .3s ease-in-out, outline .3s ease-in-out, color .3s ease-in-out;
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+
+.list__btn:focus-visible {
+  outline: 3px solid orange;
+}
+
+.list__btn::before,
+.list__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.list__btn::before {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.list__btn::after {
+  background-color: blueviolet;
+  transform: rotateY(-180deg);
+}
+
+.list__btn_success {
+  color: green;
+}
+
+.list__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game__span {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 155px;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, .3);
+  transform: translate(-50%, -50%);
+}
+
+.game__btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* rules */
+.rules {
+  padding: 10px 0;
+}
